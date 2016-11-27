@@ -1,0 +1,24 @@
+{
+    "name": "rparpa/git-log-indexer",
+    "description": "Index git log in an easilly searchable ElasticSearch database",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rémi Parpaillon",
+            "email": "remi.parpaillon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GitIndexer\\": "src/",
+            "GitIndex\\tests\\units\\": "tests/units"
+        }
+    },
+    "require": {
+        "atoum/atoum": "^2.8"
+    },
+    "require-dev": {
+        "atoum/stubs": "^2.5"
+    }
+}

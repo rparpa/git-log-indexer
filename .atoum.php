@@ -14,6 +14,9 @@ $testGenerator->setTestClassNamespace('GitIndexer\tests\units');
 
 $runner->addTestsFromDirectory(__DIR__ . '/tests/units');
 
+$report = $script->addDefaultReport();
+
+$report->addField(new mageekguy\atoum\report\fields\runner\result\logo());
 $extension = new mageekguy\atoum\autoloop\extension($script);
 $extension
     ->setWatchedFiles([__DIR__ . '/src'])

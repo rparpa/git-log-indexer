@@ -5,3 +5,6 @@ vendor:
 
 test: install
 	./vendor/bin/atoum
+
+test-loop: install
+	./vendor/bin/atoum --autoloop -ncc

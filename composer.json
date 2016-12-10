@@ -12,7 +12,7 @@
     "autoload": {
         "psr-4": {
             "GitIndexer\\": "src/",
-            "GitIndex\\tests\\units\\": "tests/units"
+            "GitIndexer\\tests\\units\\": "tests/units"
         }
     },
     "require": {

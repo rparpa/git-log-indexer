@@ -41,8 +41,8 @@ COMMIT;
         $commitMessage = <<<'MSG'
 Add basic test file
 
-    At the moment, only a manual test.  This commit is unsigned on purposes, in
-    order to test non signed commit parsing.
+At the moment, only a manual test.  This commit is unsigned on purposes, in
+order to test non signed commit parsing.
 MSG;
 
         $diff = <<<'DIFF'
@@ -74,8 +74,12 @@ DIFF;
 
     public function testHydrate(\GitIndexer\Commit $commit)
     {
+        $this->given($this->calling($commit)->methods()->return = $commit);
+
         foreach ($this->hydrateDataProvider() as $dataToTest) {
             $this
+                ->assert('Commit should be hydrated correctly')
+
                 ->object($this->newTestedInstance())
                     ->isTestedInstance()
 
@@ -92,7 +96,7 @@ DIFF;
                     ->once()
 
                     ->call('setDate')
-                    ->withArguments(new \DateTime($dataToTest[3]))
+                    ->withArguments(new \DateTimeImmutable($dataToTest[3]))
                     ->once()
 
                     ->call('setMessage')

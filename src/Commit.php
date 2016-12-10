@@ -30,7 +30,7 @@ class Commit
     private $diff;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeImmutable
      */
     private $date;
 
@@ -123,18 +123,18 @@ class Commit
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeImmutable
      */
-    public function getDate() : \DateTime
+    public function getDate() : \DateTimeImmutable
     {
         return $this->date;
     }
 
     /**
-     * @param \DateTime $date
+     * @param \DateTimeImmutable $date
      * @return \GitIndexer\Commit
      */
-    public function setDate(\DateTime $date)
+    public function setDate(\DateTimeImmutable $date)
     {
         $this->date = $date;
         return $this;

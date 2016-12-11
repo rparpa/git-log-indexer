@@ -16,7 +16,8 @@
         }
     },
     "require": {
-        "atoum/atoum": "^2.8"
+        "atoum/atoum": "^2.8",
+        "elasticsearch/elasticsearch": "^5.0"
     },
     "require-dev": {
         "atoum/stubs": "^2.5",

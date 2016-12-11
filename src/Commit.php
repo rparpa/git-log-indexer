@@ -35,6 +35,11 @@ class Commit
     private $date;
 
     /**
+     * @var string[]
+     */
+    private $branches;
+
+    /**
      * Commit constructor.
      */
     public function __construct()
@@ -137,6 +142,24 @@ class Commit
     public function setDate(\DateTimeImmutable $date)
     {
         $this->date = $date;
+        return $this;
+    }
+
+    /**
+     * @return \string[]
+     */
+    public function getBranches(): array
+    {
+        return $this->branches;
+    }
+
+    /**
+     * @param \string[] $branches
+     * @return Commit
+     */
+    public function setBranches(array $branches): Commit
+    {
+        $this->branches = $branches;
         return $this;
     }
 }

@@ -142,6 +142,7 @@ class Commit
         }
 
         $this->commit->setDiff(trim($this->message));
+        $this->isDiff = false;
         $this->message = '';
 
         return $commit;
